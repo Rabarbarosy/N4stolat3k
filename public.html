@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webhook Sender - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Webhook Sender</h1>
+      <button id="logoutBtn" class="logout-btn">Wyloguj się</button>
+    </div>
+    <div class="dashboard">
+      <div class="form-section">
+        <h2>Wyślij wiadomość</h2>
+        <form id="webhookForm">
+          <div class="form-group">
+            <label for="webhookUrl">Webhook URL:</label>
+            <input type="text" id="webhookUrl" placeholder="Wklej URL webhooka" required>
+          </div>
+          <div class="form-group">
+            <label for="content">Treść wiadomości:</label>
+            <textarea id="content" placeholder="Wpisz treść wiadomości (opcjonalne)"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="embedTitle">Tytuł embeda:</label>
+            <input type="text" id="embedTitle" placeholder="Tytuł embeda (opcjonalne)">
+          </div>
+          <div class="form-group">
+            <label for="embedDescription">Opis embeda:</label>
+            <textarea id="embedDescription" placeholder="Opis embeda (opcjonalne)"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="embedColor">Kolor embeda:</label>
+            <input type="color" id="embedColor" value="#00FF00">
+          </div>
+          <button type="submit">Wyślij wiadomość</button>
+        </form>
+        <div id="response" class="response"></div>
+      </div>
+      <div class="logs-section">
+        <h2>Historia wiadomości</h2>
+        <div id="logs"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
